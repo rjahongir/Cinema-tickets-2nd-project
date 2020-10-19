@@ -29,20 +29,17 @@ body {
    margin: 0;
    padding: 0;
    background-color: rgb(48,129,187);
+    overflow: scroll;
 }
 
 .container {
    width: 100%;
-   max-width: 1040px;
-/*    margin-top: 20px; */
+   max-width: 800px;
+   margin-top: 20px;
    padding-left: 20px;
    padding-right: 20px;
    margin-left: auto;
    margin-right: auto;
-}
-
-.main {
-   flex-grow: 1;
 }
 
 .movies__list,
@@ -54,40 +51,39 @@ body {
    margin: 0;
    list-style-type: none;
 }
-/* .batman {
-   display: block;
-   position: absolute;
-   z-index: -8;
-   object-fit: cover; 
-   object-position: center top;
-   display: none;
-   transform: scale(0); 
-   transition: transform 1s cubic-bezier(.6,.1,.41,1.82);
-} */
 
-.lucy ,
+.cinema-ticket__lucy,
 .cinema-ticket__justice-ieague,
-.cinema-ticket__avatar2 {
-   display: block;
+.cinema-ticket__avatar2,
+.cinema-ticket__batman{
    position: absolute;
    z-index: -8;
    object-fit: cover; 
    display: none;
-   transform: scale(0); 
-   transition: transform 1s cubic-bezier(.6,.1,.41,1.82);
 }
-.cinema-ticket:hover .lucy,
+
+.cinema-ticket:hover .cinema-ticket__lucy,
 .cinema-ticket:hover .cinema-ticket__justice-ieague, 
-.cinema-ticket:hover .cinema-ticket__avatar2{
+.cinema-ticket:hover .cinema-ticket__avatar2,
+.cinema-ticket:hover .cinema-ticket__batman{
    display: block;
    z-index: -9;
-   transform: scale(1);
    opacity: 0.5;
    top: -10px;
    left: 0;
    right: 0;   
    width:100%;
-   height:110vh ;
+   height:150vh ;
+} 
+
+.cinema-ticket:hover .cinema-ticket__lucy,
+.cinema-ticket:hover .cinema-ticket__avatar2,
+.cinema-ticket:hover .cinema-ticket__batman {
+   height:160vh ;
+}
+
+.cinema-ticket__lucy {
+   object-position: top center;
 } 
 
 .movies__item {
@@ -188,7 +184,6 @@ body {
    background-color: rgb(51, 45, 45);
    color: white;
    transition:background-color 0.4s ease ;
-   
 }
 
 .movies-card__buy-button:hover{
