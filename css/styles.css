@@ -65,7 +65,8 @@ body {
    transition: transform 1s cubic-bezier(.6,.1,.41,1.82);
 } */
 
-.lucy {
+.lucy ,
+.cinema-ticket__justice-ieague {
    display: block;
    position: absolute;
    z-index: -8;
@@ -74,7 +75,8 @@ body {
    transform: scale(0); 
    transition: transform 1s cubic-bezier(.6,.1,.41,1.82);
 }
-.cinema-ticket:hover .lucy{
+.cinema-ticket:hover .lucy,
+.cinema-ticket:hover .cinema-ticket__justice-ieague {
    display: block;
    z-index: -9;
    transform: scale(1);
